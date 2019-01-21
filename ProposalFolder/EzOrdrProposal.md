@@ -21,6 +21,22 @@ We will (most likely) be using HTML/CSS for styling and JavaScript for making th
 
 ## Project Management
 
-The completion of this project is feasible in the time frame if the group works at a consistent pace. We will meet each class period for face-to-face time, along with remote meetings over chat apps such as Slack and GroupMe. Additionally, more face-to-face time will be scheduled, as our group agrees in unison that this is an important pillar in understanding our project and staying on the same page, especially with team members in different roles. 
-Below is a general schedule and timeline of work-flow:
+The completion of this project is feasible in the time frame if the group works at a consistent pace. We will meet each class period for face-to-face time, along with remote meetings over chat apps such as Slack and GroupMe. Additionally, more face-to-face time will be scheduled, as our group agrees in unison that this is an important pillar in understanding our project and staying on the same page, especially with team members in different roles.  
+Below is a general schedule and timeline of work-flow:  
+
+1/20 – 1/26: Write proposal and revise as necessary.  
+1/27 – 2/2: Begin application development: Create necessary data structures and build accordingly.  
+2/3 – 2/10: Work on building framework for both interfaces.  
+2/11 – 2/15: Finish Sprint 1, have minimal viable system running and complete iteration 1 status report.  
+2/16 – 2/22: Keep building up system, have kitchen interface completed.  
+2/24 – 3/1: Have un-styled customer interface completed and have coordination between kitchen and customer interfaces. Finish Sprint 2 and submit status report.  
+3/2 – 3/8: Testing for stable communication between kitchen and customer interface.  
+3/9 – 3/15: Style customer side and keep testing. Finish Sprint 3 and submit status report.  
+3/16 – 3/22: Keep testing and complete project. If time permits, create platform for customer to pay at table.  
+3/23 – 3/29: If necessary, keep working on payment platform. Work on final paper and final presentation.  
+3/30 – 4/3: Have project finished, also finish final paper and be prepared to present.  
+
+In terms of constraints, there is nothing to be concerned with. There is no regulation when it comes to ordering food from a tablet, and no legal concerns. Additionally, there are no ethical or social concerns. The user is simply submitting their order directly to the kitchen instead of going through a waiter.   
+The only resource we may need for this project is access to a database. This should not be an issue as there are servers at UTK that can allow us access.  
+If full-functionality cannot be completed, there is a chance there will still be a working product, but this depends on the level of incompletion. For example, if we complete everything but styling elements and payment then this will still be a usable and effective product that will help businesses. However, if both interfaces are fully completed but orders are not being properly received by the kitchen then this product would be useless. Therefore, it is imperative that we first create a minimal viable system that can communicate with one another before moving on.
 
