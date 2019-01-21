@@ -49,7 +49,7 @@ Below is a general schedule and timeline of work-flow:
 
 In terms of constraints, there is nothing to be concerned with. There is no regulation when it comes to ordering food from a tablet, and no legal concerns. Additionally, there are no ethical or social concerns. The user is simply submitting their order directly to the kitchen instead of going through a waiter.   
 
-The only resource we may need for this project is access to a database. This should not be an issue as there are servers at UTK that can allow us access.  
+The only resource we *may* need for this project is access to a database. This should not be an issue as there are servers at UTK that can allow us access.  
 
-If full-functionality cannot be completed, there is a chance there will still be a working product, but this depends on the level of incompletion. For example, if we complete everything but styling elements and payment then this will still be a usable and effective product that will help businesses. However, if both interfaces are fully completed but orders are not being properly received by the kitchen then this product would be useless. Therefore, it is imperative that we first create a minimal viable system that can communicate with one another before moving on.
+If full-functionality cannot be completed, there is a chance there will still be a working product, but this depends on the level of incompletion. For example, if we complete everything but styling elements and payment then this will still be a usable and effective product that will help businesses. However, if both interfaces are fully completed but orders are not being properly received by the kitchen then this product would be useless. Therefore, it is *imperative* that we first create a minimal viable system that can communicate with one another before moving on.
 
