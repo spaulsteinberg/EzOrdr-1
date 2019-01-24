@@ -29,9 +29,9 @@ We will (most likely) be using HTML/CSS for styling and JavaScript for making th
 
 Our team members skills and interests are as follows:
 
-• Samuel Steinberg is interested in mapping software and enjoys graphing within the realm of software development. In terms of this project, his skills in HTML/CSS, JavaScript, and perhaps C++/Java will be of benefit to the team. This also relates one of his activities, which include creating CSS animations and stylings.
-• Ethan Grissom is interested in web applications and UI designs. His skills in HTML/CSS and JavaScript, front end testing experience, and C++/Java will be very helpful for this project.
-• Aaron Johnson's interests lay in application design and cybersecurity. His experience in C++ and HTML/CSS should be put to use in this application.
+• Samuel Steinberg is interested in mapping software and enjoys graphing within the realm of software development. In terms of this project, his skills in HTML/CSS, JavaScript, and perhaps C++/Java will be of benefit to the team. This also relates one of his activities, which include creating CSS animations and stylings.  
+• Ethan Grissom is interested in web applications and UI designs. His skills in HTML/CSS and JavaScript, front end testing experience, and C++/Java will be very helpful for this project.  
+• Aaron Johnson's interests lay in application design and cybersecurity. His experience in C++ and HTML/CSS should be put to use in this application.  
 • Viktor Zenkov is interested in application development and machine learning. He has expertise in Python and C++ as well as knowledge of HTML/CSS. Viktor’s knowledge of application development and programming skills will be of great use in this project.
 
 In general, the tools our team will use to build our application will present a new experience. Aaron Johnson and Ethan Grissom will be in charge of the database and building the kitchen’s interface, while Samuel Steinberg and Viktor Zenkov will handle the customer interface. This was decided since Samuel Steinberg and Viktor Zenkov have the most experience when it comes to styling and creating an interactive layout, while Aaron Johnson and Ethan Grissom have experience in processing. This array of experiences each member has is why we believe our goals are attainable and why we will be a successful team. In addition, each group member is known to one another as a problem solver and a hard worker. These traits will be needed for this project, as there are bound to be bumps along the way. With due subject to change, roles will be fixed.
