@@ -22,6 +22,12 @@ Measuring the success of this product will be quite straightforward: Before an o
 
 ## Technology
 
+Our application will implement an ordering system where the customer is completely in control of what is ordered, reducing human error and cutting costs for restaurant owners. There will be an interface for the kitchen (also handles administrative tasks) and a customer interface. The interface for the customer will consist of the left half of the screen replicating a typical menu, and the right half consisting of a list of what has been ordered. The menu will be styled with HTML/CSS and made interactive with JavaScript. The kitchen interface will be in the form of a simple queue where each node contains the customer order. Each node structure will contain an attribute that represents whether the order has been completed or not, and if so it will be pushed into a database and popped from the screen. 
+
+
+The minimal system to have the value to the customer would be to have a working kitchen interface, working database, and an un-styled menu for the customer. This would still add value to a given restaurant owner. One possible enhancement is allowing the administrative interface to seamlessly add, drop, or change menu items. This would allow daily specials to be displayed on the customer’s screen and allows easy changes to items such as toppings. Additionally, enhancements such as being able to pay on the tablet (at the table) would make the customer experience even better. This would also enhance security since the customer will be the only person handling their credit card. We will initially test the system by developing simple test cases. After we can send normal orders through our system, we will try to break our program and find as many edge cases as possible.
+	We will use tools such as Visual Studio Code and MongoDB to store our data. Visual Studio Code allows for seamless development of HTML/CSS and JavaScript, all while displaying the page when compiled. MongoDB allows for easy storage and retrieval of information. This will be of use to our system when we send customer orders and store completed ones after being marked as completed. These tools are easy to use and easy to get access to.
+
 
 ## Team and Roles
 
