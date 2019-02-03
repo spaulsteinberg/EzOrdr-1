@@ -1,0 +1,29 @@
+<html>
+    <head>
+    {% if restuarant %}
+        {% if title %}
+            <title>{{ title }} - {{restuarant.name}}</title>
+        {% else %}
+            <title> Subpage - {{restuarant.name}} </title>
+        {% endif %}
+    
+    {% else %}
+        {% if title %}
+            <title>{{ title }} - Restuarant</title>
+        {% else %}
+            <title> Subpage - Restuarant</title>
+        {% endif %}
+    
+    {% endif %}
+
+    </head>
+    <body>
+        <div>Site: 
+            <a href="/menu">Menu</a>
+            <a href="/queue">Pending Orders</a>
+            <a href="/admin">Admin</a>
+        </div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,22 @@
+Technologies 
+    HTML / Anguluar (pending python)
+    Python(flask) + MongoDB 
+
+MVP:
+    Ordering page
+    Kitchen Page
+
+        DB connecting either 
+    
+Extra options:
+    Admin panel to control 
+    "Extra" options
+    Frequent diners (favorite orders)
+    Alternate DB for past orders
+    Store in deployable Docker Container
+
+Next week: 
+    Get dev environment up and running
+
+Week After: 
+    
