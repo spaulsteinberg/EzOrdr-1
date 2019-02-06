@@ -20,3 +20,6 @@
    * Win: ```venv\Scripts\activate```
 * Leaving venv
    * ```deactivate```
+
+# Useful Tutorial:
+* https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
