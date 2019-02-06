@@ -15,3 +15,8 @@
     * Use LF line endings, Recommended to turn on autosaving as well.
     * Install python extension and enable PyLint for style consistency
 
+* Getting into venv
+   * Unix: source venv/bin/activate
+   * Win: venv\Scripts\activate
+* Leaving venv
+   * deactivate
