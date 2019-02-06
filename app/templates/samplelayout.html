@@ -2,31 +2,192 @@
 <html>
 <title> EzOrdr Sample </title>
 <body>
-<div class="MainCourses">
-	<h1 id="entrees"> Entrees </h1>
-<div id="hamburger">
-	Hamburger
-	<ul style: "grey">
-		<li>Lettuce<input type="checkbox" name="lettuce" value="true"></li>
-		<li>Tomato<input type="checkbox" name="tomato" value="true"></li>
-		<li>Onion<input type="checkbox" name="onion" value="true"></li>
-	</ul>
-</div> 
-</div>
+  <header>Sample Menu</header>
+
+	<div class = "row">
+		<div class="appetizers">
+			<h1 id="Starters" align="center"> Appetizers </h1>
+			<div id="app-sides">
+				<p>House Salad<input type="checkbox" name="house-salad" value="true"></p>
+				<p>Sliders<input type="checkbox" name="sliders" value="true"></p>
+				<p>Nachos<input type="checkbox" name="nachos" value="true"></p>
+				<p>Chips<input type="checkbox" name="chips" value="true"></p>
+				<p>Fish Tacos<input type="checkbox" name="fish-tacos" value="true"></p>
+				<p>Souls of the Children<input type="checkbox" name="soc" value="true"></p>
+				<p>Buffalo Wings<input type="checkbox" name="buffalo-wings" value="true"></p>
+				<p>Fried Onion<input type="checkbox" name="fried-onion" value="true"></p>
+				<p>Pepper Rings<input type="checkbox" name="pep-rings" value="true"></p>
+				<p>Crab Cakes<input type="checkbox" name="crab-cakes" value="true"></p>
+				<p>Salsa<input type="checkbox" name="salsa" value="true"></p>
+				<p>Hummus<input type="checkbox" name="hummus" value="true"></p>
+				<p>Bacon<input type="checkbox" name="bacon" value="true"></p>
+				<p>Pigs in Blanket<input type="checkbox" name="pib" value="true"></p>
+				<p>Pork Sliders<input type="checkbox" name="pork-sliders" value="true"></p>
+				<p>Normal Tacos<input type="checkbox" name="normal tacos" value="true"></p>
+				
+			</div> 
+		</div>
+	</div>
+
+	<div class = "row">
+			<div class="MainCourses">
+				<h1 id="Entrees" align="center"> Entrees </h1>
+				<div class="entree-items">
+					<div id="hamburger">
+						<p> Hamburger <input type="checkbox" name ="hamburger" value="true"></p>
+							<ul style: "aqua">
+								<li>Lettuce<input type="checkbox" name="lettuce" value="true"></li>
+								<li>Tomato<input type="checkbox" name="tomato" value="true"></li>
+								<li>Onion<input type="checkbox" name="onion" value="true"></li>
+							</ul>
+					</div> 
+					<div id="Burrito">
+						<p> Burrito <input type="checkbox" name ="burrito" value="true"></p>
+							<ul style: "aqua">
+								<li>Black Beans<input type="checkbox" name="bb" value="true"></li>
+								<li>Rice<input type="checkbox" name="rice" value="true"></li>
+								<li>Chicken<input type="checkbox" name="chicken" value="true"></li>
+								<li>Salsa<input type="checkbox" name="sals" value="true"></li>
+								<li>Beef<input type="checkbox" name="beef" value="true"></li>
+								<li>Grilled Vegetables<input type="checkbox" name="g-v" value="true"></li>
+							</ul>
+					</div> 
+				</div>
+			</div>
+		</div>
+
+	<div class = "row">
+			<div class="sides">
+				<h1 id="sides" align="center"> Sides </h1>
+				<div id="side-table">
+					<p> Broccoli <input type="checkbox" name ="broc" value="true"></p>
+					<p> Caesar Salad<input type="checkbox" name ="caesar" value="true"></p>
+					<p> Asparagus <input type="checkbox" name ="asparagus" value="true"></p>
+					<p> Fries <input type="checkbox" name ="fries" value="true"></p>
+					<p> Onion Rings<input type="checkbox" name ="or" value="true"></p>
+					<p> Mashed Potatoes <input type="checkbox" name ="mash" value="true"></p>
+				</div> 
+			</div>
+	</div>
+
+	<div class = "row">
+			<div class="desserts">
+				<h1 id="Desserts" align="center"> Desserts </h1>
+				<div id="compons">
+					<p> Creme Brule <input type="checkbox" name ="creme" value="true"></p>
+					<p> Flan <input type="checkbox" name ="flan" value="true"></p>
+					<p> Cheesecake <input type="checkbox" name ="cheesecake" value="true"></p>
+					<p> Cupcake <input type="checkbox" name ="cupcake" value="true"></p>
+				</div> 
+				
+			</div>
+	</div>
 
 
+	<div class = "total-bar">
+		<div class="total">
+			<h1 id="total" align="center"> Your Order </h1>
+			<div id="t-bar">
+				<p> Order elements and total displayed here</p>
+			</div> 
+		</div>
+	</div>
 <style>
+* {
+	box-sizing: border-box;
+}
 
+.total-bar {
+	position: absolute;
+	background: grey;
+	overflow: wrap;
+	right: calc(0% + 50px);
+	top: 70px;
+	height: calc(100% - 57px);
+	width: 15%;
+	z-index: 10;
+}
+
+header {
+	font-size: 30px;
+	font-weight: bold;
+	display: block;
+	text-align: center;
+}
 body {
-	background-image: url("http://web.eecs.utk.edu/~audris/images/small.png");
+	background: teal;
 	overflow: scroll;
+}
+
+p {
+	display: inline-block;
+	padding-inline-start: 30px;
+	font-size: 25px;
+}
+
+.row .desserts #compons {
+	text-align: center;
+	font-size: 20px;
+	padding-left:20%;
+	padding-right: 20%;
+}
+
+.row {
+	position: relative;
+	font-size: 20px;
+	padding-left: 50px;
+	padding-right: 50px;	
+	overflow: wrap;
+	width: 85%;
+}
+
+.row h1 {
+	font-style: italic;
+}
+
+.row .appetizers {
+	background: green;
+	height: 33.3%;
+}
+
+.row .appetizers #app-sides{
+	text-align: center;
+	font-size: 20px;
+	padding-left:20%;
+	padding-right: 20%;
+}
+
+.row .sides {
+	background: magenta;
+	height: 12%;
+}
+
+.row .sides #side-table {
+	text-align: center;
+	font-size: 20px;
+	padding-left:10%;
+	padding-right: 10%;
+}
+
+.row .MainCourses {
+	background: white;
+	height: 33.3%;
+}
+
+.row .MainCourses .entree-items{
+	color: black;
+}
+
+.row .desserts {
+	background: orange;
+	height: 12%;
 }
 
 </style>
 
+<!--
 <script>
 	alert("Viktor Zenkov is a Russian spy.");
 </script>
-
-</body>
+-->
 </html>
