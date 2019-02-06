@@ -16,7 +16,7 @@
     * Install python extension and enable PyLint for style consistency
 
 * Getting into venv
-   * Unix: source venv/bin/activate
-   * Win: venv\Scripts\activate
+   * Unix: ```source venv/bin/activate```
+   * Win: ```venv\Scripts\activate```
 * Leaving venv
-   * deactivate
+   * ```deactivate```
