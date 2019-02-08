@@ -1,6 +1,9 @@
 <DOCTYPE! html>
 <html>
-<title> EzOrdr Sample </title>
+<head>
+	<script type="text/javascript" src="script.js"></script>
+	<title> EzOrdr Sample </title>
+</head>
 <body>
   <header>Sample Menu</header>
 
@@ -48,8 +51,6 @@
 								<li>Rice<input type="checkbox" name="rice" value="true"></li>
 								<li>Chicken<input type="checkbox" name="chicken" value="true"></li>
 								<li>Salsa<input type="checkbox" name="sals" value="true"></li>
-								<li>Beef<input type="checkbox" name="beef" value="true"></li>
-								<li>Grilled Vegetables<input type="checkbox" name="g-v" value="true"></li>
 							</ul>
 					</div> 
 				</div>
@@ -74,7 +75,7 @@
 			<div class="desserts">
 				<h1 id="Desserts" align="center"> Desserts </h1>
 				<div id="compons">
-					<p> Creme Brule <input type="checkbox" name ="creme" value="true"></p>
+          <p> Creme Brule <input type="checkbox" id="creme" value="true"></p>
 					<p> Flan <input type="checkbox" name ="flan" value="true"></p>
 					<p> Cheesecake <input type="checkbox" name ="cheesecake" value="true"></p>
 					<p> Cupcake <input type="checkbox" name ="cupcake" value="true"></p>
@@ -107,7 +108,7 @@
 	width: 15%;
 	z-index: 10;
 }
-
+  
 header {
 	font-size: 30px;
 	font-weight: bold;
@@ -175,6 +176,7 @@ p {
 }
 
 .row .MainCourses .entree-items{
+	display: inline-block;
 	color: black;
 }
 
@@ -184,10 +186,5 @@ p {
 }
 
 </style>
-
-<!--
-<script>
-	alert("Viktor Zenkov is a Russian spy.");
-</script>
--->
+</body>
 </html>
