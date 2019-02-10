@@ -1,7 +1,11 @@
 from flask import render_template
 from app import app
+from flask_pymongo import PyMongo
 
-@app.route('/')
+app.config["MONGO_URI"] = "mongodb://localhost:27017/submitted-orders"
+mongo = PyMongo(app)
+
+@app.route("/")
 @app.route('/index')
 def index():
     return render_template('samplelayout.html', title = 'Index')

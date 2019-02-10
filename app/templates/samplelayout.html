@@ -84,7 +84,6 @@
 			</div>
 	</div>
 
-
 	<div class = "total-bar">
 		<div class="total">
 			<h1 id="total" align="center"> Your Order </h1>
@@ -93,6 +92,11 @@
 			</div> 
 		</div>
 	</div>
+
+	<div class = "submit-button">
+		<button class="button" onclick= m>Submit Order</button>
+	</div>
+
 <style>
 * {
 	box-sizing: border-box;
@@ -104,11 +108,27 @@
 	overflow: wrap;
 	right: calc(0% + 50px);
 	top: 70px;
-	height: calc(100% - 57px);
+	height: 80%;
 	width: 15%;
 	z-index: 10;
 }
   
+.button {
+	border: none;
+	color: white;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	position: absolute;
+	background: green;
+	overflow: wrap;
+	right: calc(0% + 50px);
+	top: 85%;
+	height: 5%;
+	width: 15%;
+}
+
 header {
 	font-size: 30px;
 	font-weight: bold;
@@ -217,8 +237,6 @@ p {
 			}
 		}
 	}
-		
-		
 </script>
 
 </body>
