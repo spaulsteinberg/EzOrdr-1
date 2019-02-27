@@ -2,6 +2,7 @@
 * Python 3.7.2+     https://www.python.org/downloads/release/python-372/
     * Be sure to Install for all users, add to path
 * PyMongo   https://api.mongodb.com/python/current/installation.html
+* Flask-PyMongo https://flask-pymongo.readthedocs.io/en/latest/
 * Flask       http://flask.pocoo.org/docs/1.0/installation/#python-version
 * MongoDB     https://docs.mongodb.com/manual/administration/install-community/
 * AngularJS   https://angular.io/guide/quickstart
