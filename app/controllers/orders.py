@@ -1,5 +1,6 @@
 ''' controller and routes for orders '''
 import os
+import json
 from flask import request, jsonify
 from app import app, mongo
 
@@ -7,8 +8,9 @@ from app import app, mongo
 def user():
     if request.method == 'GET':
         query = request.args
-        data = mongo.db.orders.find_one(query)
+        data = mongo.db.orders.find_one()
         return jsonify(data), 200
+
 
     data = request.get_json()
     if request.method == 'POST':
