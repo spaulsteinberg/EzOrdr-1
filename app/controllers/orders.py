@@ -8,9 +8,8 @@ from app import app, mongo
 def user():
     if request.method == 'GET':
         query = request.args
-        data = mongo.db.orders.find_one()
+        data = mongo.db.orders.find_one(query)
         return jsonify(data), 200
-
 
     data = request.get_json()
     if request.method == 'POST':
