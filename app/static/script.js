@@ -25,19 +25,32 @@ function addThisItemToList(elmnt) {  // elmnt is 'this' from the onclick functio
 			} else {  // do nothing
 			}
 		}
-    }
+		}
+
+//WIP: Convert checked menu items to json format
+function parse_order(){
+var checkedBoxes = document.querySelectorAll('input[name=mycheckboxes]:checked');
+	var order_json = Json.stringify(order);
+	return order_json;
+}
+
 function senddata(){
+
+	var	data = parse_order();
+
 	// Sending and receiving data in JSON format using POST method
 	var xhr = new XMLHttpRequest();
-	var url = "url";
+	var url = "http://localhost:5000/orders";
 	xhr.open("POST", url, true);
 	xhr.setRequestHeader("Content-Type", "application/json");
 	xhr.onreadystatechange = function () {
 		if (xhr.readyState === 4 && xhr.status === 200) {
 			var json = JSON.parse(xhr.responseText);
-			console.log(json.email + ", " + json.password);
+			console.log("Success: sent order to server");
 		}
 	};
+
+	//Hardcoded data at the moment
 	var data = JSON.stringify({"email": "hey@mail.com", "password": "101010"});
 	xhr.send(data);
 }
