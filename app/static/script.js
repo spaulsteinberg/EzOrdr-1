@@ -28,16 +28,23 @@ function addThisItemToList(elmnt) {  // elmnt is 'this' from the onclick functio
 		}
 
 //WIP: Convert checked menu items to json format
-function parse_order(){
-var checkedBoxes = document.querySelectorAll('input[name=mycheckboxes]:checked');
-	var order_json = Json.stringify(order);
-	return order_json;
+function parse_order(selector){
+	var items=document.getElementsByClassName(selector);
+	var selectedItems="";
+	console.log(items);
+	for(var i=0; i<items.length; i++){
+		if(items[i].type=="checkbox" && items[i].checked==true){
+			console.log("Hello world");
+			selectedItems+=items[i].name+"\n";
+		}	
+	}
+	alert(selectedItems);
+	return selectedItems;
 }
 
 function senddata(){
-
-	var	data = parse_order();
-
+	var	data = parse_order("desserts");
+	console.log(data);
 	// Sending and receiving data in JSON format using POST method
 	var xhr = new XMLHttpRequest();
 	var url = "http://localhost:5000/orders";
