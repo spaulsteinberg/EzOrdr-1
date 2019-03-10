@@ -38,7 +38,7 @@ function parse_order(selector){
 			selectedItems+=items[i].name+"\n";
 		}	
 	}
-	alert(selectedItems);
+	//alert(selectedItems);
 	return selectedItems;
 }
 
