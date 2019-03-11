@@ -7,7 +7,24 @@
 	<script type = "text/javascript" 
 	src = "{{ url_for('static', filename = 'reciever.js') }}" ></script>	
 </head>
-<body>
-    <p> Text here </p>
+<body> <!-- maybe create new div for each order then p's? -->
+	<div>
+		<p id = "_id" align = center style="font-size: 25px;"></p>
+		<p id = "email"></p>
+		<p id = "password"></p>
+	</div>
 </body>
+
+<style>
+body {
+	background: lightseagreen;
+}
+div {
+	width: 20%;
+	background: blue;
+	padding: 20px;
+	border: black;
+	margin: 10px black;
+}
+</style>
 </html>

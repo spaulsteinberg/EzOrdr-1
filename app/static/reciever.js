@@ -1,19 +1,21 @@
-var TestFunction = "Viktort";
-	$.ajax({
+  $.ajax({
 		url:"http://localhost:5000/orders",
 		type: "GET",
 		dataType: 'json',
 		success: function(data){
 			console.log("Success");
 			//var data = JSON.parse(data)
-			TestFunction = data.email;
+			email = data.email;
+			_id = data._id;
+			password = data.password
 			$(document).ready(function(){
-				$("p").append(TestFunction);
+				$("#email").append("email " + email);
+				$("#_id").append("ID " + _id);
+				$("#password").append("Password: " +password);
 			});
 		},
 		error: function() {
 			console.log("Failure");
-			TestFunction = "failure";
 		}
 	});
 
