@@ -27,7 +27,7 @@ The above code snippet in Figure 1 represents the successful communication betwe
 * Samuel Steinberg: was responsible for creating and designing the initial Customer interface, along with setting up the database retrieval.
 * Ethan Grissom was responsible for setting up our framework, and with setting up the MongoDB database and storage.
 * Viktor Zenkov was responsible for general assistance and general scripting.
-* Aaron Johnson was responsible for general assistance and gathering ideas for a more aesthetically pleasing user interface.
+* Aaron Johnson was responsible for general assistance and gathering ideas for a more aesthetically pleasing user interface.  
 **Roles Going Forward**: Roles will generally shift to members writing JavaScript and HTML code for specific portions of the project. This is because the framework and databases are already set up. Any further work with them will mainly have to do with how we store the objects and the fields we add/subtract along the way. These changes will be reliant on the structure of our code and how it may or may not shift throughout the project.
 
 ## Project Management
