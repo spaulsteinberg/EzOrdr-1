@@ -43,7 +43,24 @@ function parse_order(selector){
 }
 
 function senddata(){
-	var	data = parse_order("desserts");
+
+	var dessertsList = parse_order("desserts1");
+	dessertsListString = dessertsList.toString();
+
+	var sidesList = parse_order("sides1");
+	sidesListString = sidesList.toString();
+	
+	var burritosList = parse_order("burritos1");
+	burritosListString = burritosList.toString();
+
+	var burgersList = parse_order("burgers1");
+	burgersListString = burgersList.toString();
+
+	var appetizersList = parse_order("appetizers1");
+	appetizersListString = appetizersList.toString();
+
+	var	data = JSON.stringify({dessertOrder: dessertsListString, sideOrder: sidesListString, 
+		burritoOrder: burritosListString, burgerOrder: burgersListString, appetizerOrder: appetizersListString});
 	console.log(data);
 	// Sending and receiving data in JSON format using POST method
 	var xhr = new XMLHttpRequest();
@@ -58,7 +75,7 @@ function senddata(){
 	};
 
 	//Hardcoded data at the moment
-	var data = JSON.stringify({"email": "hey@mail.com", "password": "101010"});
+	//var data = JSON.stringify({"email": "hey@mail.com", "password": "101010"});
 	xhr.send(data);
 }
     

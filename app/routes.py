@@ -1,5 +1,10 @@
 from flask import render_template, jsonify, request, make_response, send_from_directory
+
+from flask_cors import CORS
+
 from app import app
+
+CORS(app)
 
 @app.route('/')
 @app.route('/index')
