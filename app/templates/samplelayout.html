@@ -106,13 +106,14 @@
 
 .total-bar {
 	position: absolute;
-	background: grey;
+	/*background: grey;*/
 	overflow: auto;
-	right: calc(0% + 3%);
+	right: calc(0%);
 	top: 70px;
 	height: 100%;
 	width: 15%;
 	z-index: 10;
+	border: 10px solid black;
 }
 
 #sub-button {
@@ -127,8 +128,10 @@ header {
 	text-align: center;
 }
 body {
-	background: teal;
-
+	background: url('/static/fountainbackground.PNG');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 }
 
 p {
@@ -152,6 +155,7 @@ p {
 	padding-right: 3%;	
 	margin-bottom: 1%;
 	width: 85%;
+	border: 10px solid black;
 	
 }
 
@@ -160,7 +164,7 @@ p {
 }
 
 .row .appetizers {
-	background: green;
+	/*background: green;*/
 	height: 20%;
 }
 
@@ -172,7 +176,7 @@ p {
 }
 
 .row .sides {
-	background: magenta;
+	/*background: magenta;*/
 	height: 12%;
 }
 
@@ -184,19 +188,18 @@ p {
 }
 
 .row .MainCourses {
-	background: white;
+	/*background: white;*/
 	height: 46.6%;
 	
 }
 
 .row .MainCourses .entree-items{
 	display: inline-block;
-
-	color: black;
+	/*color: black;*/
 }
 
 .row .desserts {
-	background: orange;
+	/*background: orange;*/
 	height: 12%;
 }
 
