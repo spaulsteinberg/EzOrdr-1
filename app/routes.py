@@ -1,19 +1,18 @@
+import os
 from flask import render_template, jsonify, request, make_response, send_from_directory
-
 from flask_cors import CORS
-
 from app import app
+from flask import send_from_directory
 
 CORS(app)
 
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('samplelayout.html', title = 'Index')
+    return render_template('menu.html', title = 'Menu')
 @app.route('/menu')
 def menu():
-    restuarant = {'name': 'Tasty Foods'}
-    return render_template('menu.html', title = 'Menu', restuarant = restuarant)
+    return render_template('menu.html', title = 'Menu')
 @app.route('/queue')
 def queue():
     return render_template('queue.html', title = 'Queue')

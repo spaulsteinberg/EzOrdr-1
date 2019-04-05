@@ -34,8 +34,7 @@ function parse_order(selector){
 	console.log(items);
 	for(var i=0; i<items.length; i++){
 		if(items[i].type=="checkbox" && items[i].checked==true){
-			console.log("Hello world");
-			selectedItems+=items[i].name+"\n";
+			selectedItems+=items[i].name+",";
 		}	
 	}
 	//alert(selectedItems);
@@ -63,19 +62,24 @@ function senddata(){
 		burritoOrder: burritosListString, burgerOrder: burgersListString, appetizerOrder: appetizersListString});
 	console.log(data);
 	// Sending and receiving data in JSON format using POST method
-	var xhr = new XMLHttpRequest();
-	var url = "http://localhost:5000/orders";
-	xhr.open("POST", url, true);
-	xhr.setRequestHeader("Content-Type", "application/json");
-	xhr.onreadystatechange = function () {
-		if (xhr.readyState === 4 && xhr.status === 200) {
-			var json = JSON.parse(xhr.responseText);
-			console.log("Success: sent order to server");
-		}
-	};
 
-	//Hardcoded data at the moment
-	//var data = JSON.stringify({"email": "hey@mail.com", "password": "101010"});
-	xhr.send(data);
+	if (dessertsListString.length > 0 || sidesListString.length > 0 || burritosListString.length > 0 || burgersListString.length > 0 || appetizersListString.length > 0) {
+		// Object is NOT empty	
+		var xhr = new XMLHttpRequest();
+		var url = "http://localhost:5000/orders";
+		xhr.open("POST", url, true);
+		xhr.setRequestHeader("Content-Type", "application/json");
+		xhr.onreadystatechange = function () {
+			if (xhr.readyState === 4 && xhr.status === 200) {
+				var json = JSON.parse(xhr.responseText);
+				xhr.send(data);
+				console.log("Success: sent order to server");
+			}
+		};
+	}	
+	else {
+		var x = document.getElementById("snackbar");
+		x.className = "show";
+		setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+	}
 }
-    

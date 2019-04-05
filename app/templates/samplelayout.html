@@ -5,7 +5,9 @@
 		url_for('static', filename='jquery-3.3.1.min.js') }}"></script>
 		<title> EzOrdr Sample </title>
 	<script type = "text/javascript" 
-	src = "{{ url_for('static', filename = 'script.js') }}" ></script>	
+	src = "{{ url_for('static', filename = 'script.js') }}" ></script>
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <header>Sample Menu</header>
@@ -94,115 +96,11 @@
 				<p id="checkedItems"> </p>
 			</div> 
 		</div>
+		<div id = "sub-button">
+			<button onclick="senddata()">Submit</button>
+		</div>
 	</div>
-	<div id = "sub-button">
-		<button id = "submit" onclick="senddata()">Submit</button>
-	</div>
 
-<style>
-* {
-	box-sizing: border-box;
-}
-
-.total-bar {
-	position: absolute;
-	/*background: grey;*/
-	overflow: auto;
-	right: calc(0%);
-	top: 70px;
-	height: 100%;
-	width: 15%;
-	z-index: 10;
-	border: 10px solid black;
-}
-
-#sub-button {
-	position: relative;
-	margin-left: 50%; 	
-}
-
-header {
-	font-size: 30px;
-	font-weight: bold;
-	display: block;
-	text-align: center;
-}
-body {
-	background: url('/static/fountainbackground.PNG');
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-}
-
-p {
-	display: inline-block;
-	padding-inline-start: 3%;
-	font-size: 25px;
-	margin-top: 0%;
-}
-
-.row .desserts #compons {
-	text-align: center;
-	font-size: 20px;
-	padding-left:20%;
-	padding-right: 20%;
-}
-
-.row {
-	position: relative;
-	font-size: 20px;
-	padding-left: 3%;
-	padding-right: 3%;	
-	margin-bottom: 1%;
-	width: 85%;
-	border: 10px solid black;
-	
-}
-
-.row h1 {
-	font-style: italic;
-}
-
-.row .appetizers {
-	/*background: green;*/
-	height: 20%;
-}
-
-.row .appetizers #app-sides{
-	text-align: center;
-	font-size: 20px;
-	padding-left:20%;
-	padding-right: 20%;
-}
-
-.row .sides {
-	/*background: magenta;*/
-	height: 12%;
-}
-
-.row .sides #side-table {
-	text-align: center;
-	font-size: 20px;
-	padding-left:10%;
-	padding-right: 10%;
-}
-
-.row .MainCourses {
-	/*background: white;*/
-	height: 46.6%;
-	
-}
-
-.row .MainCourses .entree-items{
-	display: inline-block;
-	/*color: black;*/
-}
-
-.row .desserts {
-	/*background: orange;*/
-	height: 12%;
-}
-
-</style>
+<div id="snackbar">Please select a food item before ordering..</div>
 </body>
 </html>

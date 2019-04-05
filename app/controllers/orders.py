@@ -1,8 +1,9 @@
 ''' controller and routes for orders '''
 import os
 import json
-from flask import request, jsonify
+from flask import request, jsonify,send_from_directory
 from app import app, mongo
+
 
 @app.route('/orders', methods=['GET', 'POST', 'DELETE', 'PATCH'])
 def user():
@@ -34,3 +35,8 @@ def user():
             return jsonify({'ok': True, 'message': 'record updated'}), 200
         else:
             return jsonify({'ok': False, 'message': 'Bad request parameters!'}), 400
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
