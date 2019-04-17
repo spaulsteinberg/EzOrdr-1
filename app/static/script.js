@@ -59,7 +59,7 @@ function senddata(){
 	appetizersListString = appetizersList.toString();
 
 	var	data = JSON.stringify({dessertOrder: dessertsListString, sideOrder: sidesListString, 
-		burritoOrder: burritosListString, burgerOrder: burgersListString, appetizerOrder: appetizersListString});
+		burritoOrder: burritosListString, burgerOrder: burgersListString, appetizerOrder: appetizersListString, order: "active"});
 	console.log(data);
 	// Sending and receiving data in JSON format using POST method
 
