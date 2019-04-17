@@ -72,10 +72,10 @@ function senddata(){
 		xhr.onreadystatechange = function () {
 			if (xhr.readyState === 4 && xhr.status === 200) {
 				var json = JSON.parse(xhr.responseText);
-				xhr.send(data);
 				console.log("Success: sent order to server");
 			}
 		};
+		xhr.send(data);
 	}	
 	else {
 		var x = document.getElementById("snackbar");
