@@ -8,7 +8,7 @@
 	overflow: auto;
 	right: calc(0%);
 	top: 70px;
-	height: 100%;
+	height: 80%;
 	width: 15%;
 	z-index: 10;
 	border: 10px solid black;
@@ -60,6 +60,7 @@ body {
 	background-attachment: fixed;
 }
 
+
 p {
 	display: inline-block;
 	padding-inline-start: 3%;
@@ -83,6 +84,10 @@ p {
 	width: 85%;
 	border: 10px solid black;
 	
+}
+
+.row .MainCourses{
+	text-align: center;
 }
 
 .row h1 {
@@ -111,17 +116,6 @@ p {
 	font-size: 20px;
 	padding-left:10%;
 	padding-right: 10%;
-}
-
-.row .MainCourses {
-	/*background: white;*/
-	height: 46.6%;
-	
-}
-
-.row .MainCourses .entree-items{
-	display: inline-block;
-	/*color: black;*/
 }
 
 .row .desserts {
