@@ -3,14 +3,17 @@ import os
 import json
 from flask import request, jsonify,send_from_directory
 from app import app, mongo
+from bson.json_util import dumps, RELAXED_JSON_OPTIONS
 
 
 @app.route('/orders', methods=['GET', 'POST', 'DELETE', 'PATCH'])
 def user():
     if request.method == 'GET':
         query = request.args
-        data = mongo.db.orders.find_one(query)
-        return jsonify(data), 200
+        data = mongo.db.orders.find(query)
+        #for document in data:
+        #    print(json.dumps(document))
+        return dumps(data, json_options=RELAXED_JSON_OPTIONS), 200
 
     data = request.get_json()
     if request.method == 'POST':
