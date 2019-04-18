@@ -1,3 +1,5 @@
+//Big function to pull and format new orders from 
+//database for display on page
 var pollOrder = function(){
 	$.ajax({
 		url:"http://localhost:5000/orders",
@@ -5,25 +7,24 @@ var pollOrder = function(){
 		dataType: 'json',
 		success: function(data){
 			for(let i = 0; i < data.length; i++){
-				var desserts = data[i].dessertOrder;
-				var dessertsComma = desserts.replace("\n",", ");
-				var sides = data[i].sideOrder;
-				var sidesComma = sides.replace("\n",", ");
-				var burritos = data[i].burritoOrder;
-				var burritosComma = burritos.replace("\n",", ");	
-				var appetizer = data[i].appetizerOrder;
-				var appetizerComma = appetizer.replace("\n",", ");
-				var burgers = data[i].burgerOrder;
-				var burgerComma = burgers.replace("\n",", ");
-
+				//Grab items ordered and remove newlines
+				var db_desserts = data[i].dessertOrder.replace("\n",", ");
+				var db_sides = data[i].sideOrder.replace("\n",", ");
+				var db_burritos = data[i].burritoOrder.replace("\n",", ");
+				var db_burgers = data[i].burgerOrder.replace("\n",", ");
+				var db_appetizers = data[i].appetizerOrder.replace("\n",", ");
+				
+				//Grab OrderID for identifying
 				var orderID = data[i]._id.$oid;
 
-				var sides = "Sides:  "+ sidesComma +"<br>";
-				var burritos = "Burritos:  "+ burritosComma +"<br>";
-				var dessert = "Dessert:  "+ dessertsComma +"<br>";
-				var appetizer = "Appetizer:  "+ appetizerComma +"<br>";
-				var burger = "Burger:  "+ burgerComma;
+				//Create html strings
+				var sides = "Sides:  " + db_sides + "<br>";
+				var burritos = "Burritos:  " + db_burritos + "<br>";
+				var dessert = "Dessert:  " + db_desserts + "<br>";
+				var appetizer = "Appetizer:  " + db_appetizers + "<br>";
+				var burger = "Burger:  " + db_burgers;
 				
+				//Create new div with order
 				var $newdiv = $("<div id = '" + orderID + "' onclick='deleteOrders(\""+ orderID + "\")'>" + sides + burritos + dessert + appetizer + burger + "</div>");
 				//If order is new, add it to list
 				if(document.getElementById(orderID) === null){
@@ -37,21 +38,13 @@ var pollOrder = function(){
 	});
 }
 
+//Call Ajax
 pollOrder();
+//Update page every 5seconds for new orders
 setInterval(pollOrder,5000);
 
-function parse_order(selector){
-	var items=document.getElementsByClassName(selector);
-	var selectedItems = "";
-	console.log(items);
-	for(var i=0; i<items.length; i++){
-		if(items[i].type=="checkbox" && items[i].checked==true){
-			selectedItems+=items[i].name+",";
-		}	
-	}
-		console.log(selectedItems);
-	return selectedItems;
-}
+//Sends HTTPrequest to webserver to remove an entry after it has
+//been clicked
 function deleteOrders(id){
 	var xhr = new XMLHttpRequest();
 	var url = "http://localhost:5000/orders";

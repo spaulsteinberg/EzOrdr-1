@@ -42,29 +42,19 @@ function parse_order(selector){
 }
 
 function senddata(){
+	//Grab checked items and put into a string
+	var dessertsList = parse_order("desserts1").toString();
+	var sidesList = parse_order("sides1").toString();
+	var burritosList = parse_order("burritos1").toString();
+	var burgersList = parse_order("burgers1").toString();
+	var appetizersList = parse_order("appetizers1").toString();
+	//create JSON object with order
+	var	data = JSON.stringify({dessertOrder: dessertsList, sideOrder: sidesList, 
+		burritoOrder: burritosList, burgerOrder: burgersList, appetizerOrder: appetizersList, order: "active"});
 
-	var dessertsList = parse_order("desserts1");
-	dessertsListString = dessertsList.toString();
-
-	var sidesList = parse_order("sides1");
-	sidesListString = sidesList.toString();
-	
-	var burritosList = parse_order("burritos1");
-	burritosListString = burritosList.toString();
-
-	var burgersList = parse_order("burgers1");
-	burgersListString = burgersList.toString();
-
-	var appetizersList = parse_order("appetizers1");
-	appetizersListString = appetizersList.toString();
-
-	var	data = JSON.stringify({dessertOrder: dessertsListString, sideOrder: sidesListString, 
-		burritoOrder: burritosListString, burgerOrder: burgersListString, appetizerOrder: appetizersListString, order: "active"});
-	console.log(data);
 	// Sending and receiving data in JSON format using POST method
-
+	// Object is NOT empty, do stuff
 	if (dessertsListString.length > 0 || sidesListString.length > 0 || burritosListString.length > 0 || burgersListString.length > 0 || appetizersListString.length > 0) {
-		// Object is NOT empty	
 		var xhr = new XMLHttpRequest();
 		var url = "http://localhost:5000/orders";
 		xhr.open("POST", url, true);
@@ -76,12 +66,14 @@ function senddata(){
 			}
 		};
 		xhr.send(data);
+		//Notification that order was sent
 		var x = document.getElementById("snackbar");
 		x.innerHTML = "Order submitted successfully";
 		x.className = "show";
 		setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 	}	
 	else {
+		//Notification that no items were clicked
 		var x = document.getElementById("snackbar");
 		x.className = "show";
 		setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
