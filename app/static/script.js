@@ -27,7 +27,7 @@ function addThisItemToList(elmnt) {  // elmnt is 'this' from the onclick functio
 		}
 		}
 
-//WIP: Convert checked menu items to json format
+// Convert checked menu items to json format
 function parse_order(selector){
 	var items=document.getElementsByClassName(selector);
 	var selectedItems="";

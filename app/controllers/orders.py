@@ -1,6 +1,7 @@
 ''' controller and routes for orders '''
 import os
 import json
+import bson
 from flask import request, jsonify,send_from_directory
 from app import app, mongo
 from bson.json_util import dumps, RELAXED_JSON_OPTIONS
@@ -18,20 +19,18 @@ def user():
             return jsonify({'ok': True, 'message': 'orders created successfully!'}), 200
 
     if request.method == 'PUT':
-        data_array = data.split(",")
+        print(data)
+        new_arr = data
+        new_arr[0] = (bson.objectid.ObjectId(data[0]))
         mongo.db.orders.update_many(
-           {'_id': {'$in' : data_array} },
+           {'_id': {'$in' : new_arr} },
            {'$set': {"order" : "inactive"}}
         )
-        print(data_array)
         response = {'ok': True, 'message': 'Order was successfully removed'}
         return jsonify(response), 200
     else:
         response = {'ok': True, 'message': 'no record found'}
         return jsonify(response), 200
-        
-    #else:
-    #    return jsonify({'ok': False, 'message': 'Bad request parameters!'}), 400
 
 @app.route('/favicon.ico')
 def favicon():
