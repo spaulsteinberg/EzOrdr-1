@@ -54,7 +54,7 @@ function senddata(){
 
 	// Sending and receiving data in JSON format using POST method
 	// Object is NOT empty, do stuff
-	if (dessertsListString.length > 0 || sidesListString.length > 0 || burritosListString.length > 0 || burgersListString.length > 0 || appetizersListString.length > 0) {
+	if (dessertsList.length > 0 || sidesList.length > 0 || burritosList.length > 0 || burgersList.length > 0 || appetizersList.length > 0) {
 		var xhr = new XMLHttpRequest();
 		var url = "http://localhost:5000/orders";
 		xhr.open("POST", url, true);
