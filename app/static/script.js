@@ -77,8 +77,8 @@ function senddata(){
 		};
 		xhr.send(data);
 		var x = document.getElementById("snackbar");
-		x.className = "show";
 		x.innerHTML = "Order submitted successfully";
+		x.className = "show";
 		setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 	}	
 	else {
