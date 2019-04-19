@@ -18,11 +18,11 @@ var pollOrder = function(){
 				var orderID = data[i]._id.$oid;
 
 				//Create html strings
-				var sides = "Sides:  " + db_sides + "<br>";
-				var burritos = "Burritos:  " + db_burritos + "<br>";
-				var dessert = "Dessert:  " + db_desserts + "<br>";
-				var appetizer = "Appetizer:  " + db_appetizers + "<br>";
-				var burger = "Burger:  " + db_burgers;
+				var sides = "<h2>Sides:</h2> <p>" + db_sides + "</p><br>";
+				var burritos = "<h2>Burritos:</h2><p>" + db_burritos + "</p><br>";
+				var dessert = "<h2>Desserts:</h2><p>" + db_desserts + "</p><br>";
+				var appetizer = "<h2>Appetizers:</h2><p>" + db_appetizers + "</p><br>";
+				var burger = "<h2>Burgers:</h2><p>" + db_burgers + "</p><br>";
 				
 				//Create new div with order
 				var $newdiv = $("<div id = '" + orderID + "' onclick='deleteOrders(\""+ orderID + "\")'>" + sides + burritos + dessert + appetizer + burger + "</div>");
@@ -56,6 +56,9 @@ function deleteOrders(id){
 			console.log("Success: yeeted order from server");
 		}
 	};
-	xhr.send(JSON.stringify(id));
+	var temp = JSON.stringify(id);
+	console.log(temp);
+
+	xhr.send(temp);
 	document.getElementById(id).remove();
 }
