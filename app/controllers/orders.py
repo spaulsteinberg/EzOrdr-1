@@ -19,11 +19,10 @@ def user():
             return jsonify({'ok': True, 'message': 'orders created successfully!'}), 200
 
     if request.method == 'PUT':
-        print(data)
         new_arr = data
-        new_arr[0] = (bson.objectid.ObjectId(data[0]))
+        new_arr = (bson.objectid.ObjectId(data))
         mongo.db.orders.update_many(
-           {'_id': {'$in' : new_arr} },
+           {'_id': {'$eq' : new_arr} },
            {'$set': {"order" : "inactive"}}
         )
         response = {'ok': True, 'message': 'Order was successfully removed'}
