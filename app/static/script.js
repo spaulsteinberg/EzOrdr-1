@@ -45,16 +45,15 @@ function senddata(){
 	//Grab checked items and put into a string
 	var dessertsList = parse_order("desserts1").toString();
 	var sidesList = parse_order("sides1").toString();
-	var burritosList = parse_order("burritos1").toString();
-	var burgersList = parse_order("burgers1").toString();
+	var entreesList = parse_order("entrees1").toString();
 	var appetizersList = parse_order("appetizers1").toString();
 	//create JSON object with order
 	var	data = JSON.stringify({dessertOrder: dessertsList, sideOrder: sidesList, 
-		burritoOrder: burritosList, burgerOrder: burgersList, appetizerOrder: appetizersList, order: "active"});
+		entreesOrder: entreesList, appetizerOrder: appetizersList, order: "active"});
 
 	// Sending and receiving data in JSON format using POST method
 	// Object is NOT empty, do stuff
-	if (dessertsList.length > 0 || sidesList.length > 0 || burritosList.length > 0 || burgersList.length > 0 || appetizersList.length > 0) {
+	if (dessertsList.length > 0 || sidesList.length > 0 || entreesList.length > 0 || appetizersList.length > 0) {
 		var xhr = new XMLHttpRequest();
 		var url = "http://localhost:5000/orders";
 		xhr.open("POST", url, true);

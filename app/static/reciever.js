@@ -10,8 +10,7 @@ var pollOrder = function(){
 				//Grab items ordered and remove newlines
 				var db_desserts = data[i].dessertOrder.replace("\n",", ");
 				var db_sides = data[i].sideOrder.replace("\n",", ");
-				var db_burritos = data[i].burritoOrder.replace("\n",", ");
-				var db_burgers = data[i].burgerOrder.replace("\n",", ");
+				var db_entrees = data[i].entreesOrder.replace("\n",", ");
 				var db_appetizers = data[i].appetizerOrder.replace("\n",", ");
 				
 				//Grab OrderID for identifying
@@ -19,13 +18,11 @@ var pollOrder = function(){
 
 				//Create html strings
 				var sides = "<h2>Sides:</h2> <p>" + db_sides + "</p><br>";
-				var burritos = "<h2>Burritos:</h2><p>" + db_burritos + "</p><br>";
+				var entrees = "<h2>Entrees:</h2><p>" + db_entrees + "</p><br>";
 				var dessert = "<h2>Desserts:</h2><p>" + db_desserts + "</p><br>";
-				var appetizer = "<h2>Appetizers:</h2><p>" + db_appetizers + "</p><br>";
-				var burger = "<h2>Burgers:</h2><p>" + db_burgers + "</p><br>";
-				
+				var appetizer = "<h2>Appetizers:</h2><p>" + db_appetizers + "</p><br>";				
 				//Create new div with order
-				var $newdiv = $("<div id = '" + orderID + "' onclick='deleteOrders(\""+ orderID + "\")'>" + sides + burritos + dessert + appetizer + burger + "</div>");
+				var $newdiv = $("<div id = '" + orderID + "' onclick='deleteOrders(\""+ orderID + "\")'>" + sides + entrees + dessert + appetizer + "</div>");
 				//If order is new, add it to list
 				if(document.getElementById(orderID) === null){
 					$("body").prepend($newdiv);
@@ -57,7 +54,6 @@ function deleteOrders(id){
 		}
 	};
 	var temp = JSON.stringify(id);
-	console.log(temp);
 
 	xhr.send(temp);
 	document.getElementById(id).remove();
