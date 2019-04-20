@@ -15,7 +15,8 @@ There have been no changes in regard to the value our system offers to the custo
 
 
 ## Technology
-After completing the implementation of our minimum viable system (MVS), our goals were to scale up. Though we could extract from our database and send one order for our MVS, there were changes we have to make to our framework to extract more than one. For example, our backend was not suitable to handle multiple JSON objects. This became an issue when we were sending the orders as an array of JSON objects, and required the bulk of our time to make the changes. Another feature was added to constantly refresh the page and database, taking out another manual aspect. Additionally, the code for our front-end was cleaned up and made more visually appealing. The last element we needed after the MVS was dynamic element creation, which took the least amount of time to complete with documentation plentiful. \
-![](multipleorders.PNG)
+After completing the implementation of our minimum viable system (MVS), our goals were to scale up. Though we could extract from our database and send one order for our MVS, there were changes we have to make to our framework to extract more than one. For example, our backend was not suitable to handle multiple JSON objects. This became an issue when we were sending the orders as an array of JSON objects, and required the bulk of our time to make the changes. Another feature was added to constantly refresh the page and database, taking out another manual aspect. Additionally, the code for our front-end was cleaned up and made more visually appealing. The last element we needed after the MVS was dynamic element creation, which took the least amount of time to complete with documentation plentiful. Below is an example from our queue page with multiple orders. To mark an order as finished, all it takes is a simple click.
 \
+![](multipleorders.PNG)
+
 
