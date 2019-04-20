@@ -17,6 +17,18 @@ There have been no changes in regard to the value our system offers to the custo
 ## Technology
 After completing the implementation of our minimum viable system (MVS), our goals were to scale up. Though we could extract from our database and send one order for our MVS, there were changes we have to make to our framework to extract more than one. For example, our backend was not suitable to handle multiple JSON objects. This became an issue when we were sending the orders as an array of JSON objects, and required the bulk of our time to make the changes. Another feature was added to constantly refresh the page and database, taking out another manual aspect. Additionally, the code for our front-end was cleaned up and made more visually appealing. The last element we needed after the MVS was dynamic element creation, which took the least amount of time to complete with documentation plentiful. Below is an example from our queue page with multiple orders. To mark an order as finished, all it takes is a simple click.
 \
-![](multipleorders.PNG)
+![](multipleorders.PNG)  
+
+Constant testing was performed to make sure that formatting and the flow of data stayed consistent. These tests usually revealed one or multiple errors, which then yielded more. An important aspect of our project was taking a full week to manually perform quality assurance. In the end the styling and flow of data went smoothly. These tests usually entailed group members attempting to “overload” the data inserted into the database to make sure objects were being created correctly, in addition to making sure styling stayed consistent. 
+
+
+
+## Team
+ Samuel Steinberg performed the styling of the front end and back end, dynamical creation of elements, and setting up the initial AJAX atmosphere. Ethan Grissom performed the database work, and was responsible for fixing our back end to deal with multiple elements. Viktor Zenkov was responsible for our writing our JavaScript front-end and the initial linkage to the back end. Aaron Johnson assisted with HTML. Ethan Grissom and Samuel Steinberg took over as the team lead and were responsible for the management portion of the project.
+
+
+## Project Management
+We completed all goals on schedule for a workable product. We did not complete payment or administrative tasks, however. These were not considered to be a top priority but something that we would have liked to have completed. This would have made our product a more well-rounded application.
+
 
 
