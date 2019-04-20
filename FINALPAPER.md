@@ -28,7 +28,12 @@ Constant testing was performed to make sure that formatting and the flow of data
 
 
 ## Project Management
-We completed all goals on schedule for a workable product. We did not complete payment or administrative tasks, however. These were not considered to be a top priority but something that we would have liked to have completed. This would have made our product a more well-rounded application.
+We completed all goals on schedule for a workable product. We did not complete payment or administrative tasks, however. These were not considered to be a top priority but something that we would have liked to have completed. This would have made our product a more well-rounded application. Goals were set as issues and/or milestones on GitHub, and were generally completed on-time.
+
+ 
+## Reflection
+For this iteration, our front end went smoothly. It was not difficult to fix our lingering errors and complete our goals for it. This includes positioning and line issues, dynamic element creation, and general display. The back end did not go as smooth, though this was expected and was also a significantly more difficult aspect of the project than the front end. Since we had to re-work a large portion of the sending and receiving to the database this took a large amount of time and adjustments also had to be made to our existing JavaScript code for displaying and extracting responses. Overall, this project was a success. Though we did not get to implement the administrative and payment portions, these were ambitious goals. We completed a complete ordering system that can be easily scaled and is very well documented in our code and reports. Additionally, our group members were new to database languages and working with JavaScript and JSON objects. Learning these were a worthwhile experience in themselves, but to also have a legitimate completed project is very important as well (perhaps most important). 
+
 
 
 
